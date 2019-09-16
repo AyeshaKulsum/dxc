@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Welcome to DXC - Registration form</title>
+    </head>
+    <body bgcolor="pink" text="blue">
+        <h2><center>Customer Form</center></h2>
+         <form>
+             <table cellspacing="10" CELLPADDING="10" align="center"> 
+                 <tr>
+                     <td> User Name : </td>
+                     <td><input type="text" name="userName" id="userName" /><br/>
+                    </td>
+                </tr>
+                 <tr>
+                     <td>Password : </td>
+                     <td> <input type="text" name="password" id="password" />
+                    </td>
+                </tr> 
+                 <tr>
+                     <td>Confirm Password : </td>
+                     <td> <input type="text" name="confirmPassword" id="confirmPassword" />
+                    </td>
+                </tr> 
+                 <tr>
+                     <td>Full Name</td>
+                     <td><input type="text" name="fullName" id="fullName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="gender" id="gender" value="male" />Male
+                    <input type="radio" name="gender" id="gender" value="female" />Female
+                    <input type="radio" name="gender" id="gender" value="others" />others
+                     </td>
+               </tr>
+                <tr><td>Qualification</td>
+                        <td><select name="qualification" id="qualification">
+                            <option value="...">Select Option</option>
+                            <option value="MCA">MCA</option>
+                            <option value="Btech">Btech</option>
+                            <option value="MBA">MBA</option>
+
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>Alert By: </td>
+                        <td>
+                            <input type="checkbox" name="alertBy" value="mobile" id="mobile"/>Mobile
+                            <input type="checkbox" name="alertBy" value="email" id="email"/>Email
+                            <input type="checkbox" name="alertBy" value="letters" id="letters"/>Letters
+                        </td>
+                    </tr>
+                 <tr><td align="center"><input type="submit" value="Register" /></td><td > <input type="reset" value="clear" /></td></tr> 
+             </table>
+         </form>
+    </body>   
+</html>    
+
