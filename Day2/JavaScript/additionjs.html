@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function addTwoNumbers(){
+            var result = confirm('Do you want to continue ?')
+            if(result==true)
+            {
+                var number1 = parseInt(prompt("Enter first number","NA"))
+                var number2 = parseInt(prompt("Enter second number","NA"))
+                var sum = number1 + number2
+                alert(`${number1} +  ${number2} = ${number1+number2}`)
+            }
+            else{
+                alert("Then y u visited here...BEEP")
+            }
+        }
+
+            function displayMessage(){
+                //for(i=1;i<5;i++)
+                //{
+                  //  alert("Good Morning!")
+                //}
+                var d = new Date();
+                if(d.getHours()<12)
+                {
+                    alert("Good morning")
+                }
+                else if(d.getHours()<18)
+                {
+                    alert("good afternoon")
+                }
+                else
+                {
+                    alert("Good evening")
+                }
+
+            }
+           // alert(parseInt(number1)+parseInt(number2))
+            //var c= n+b;
+            //document.write(pasreInt(number1)+parseInt(number2));
+            //document.write(parseInt(++number1))
+            function roomTemperature(temp)
+            {
+                alert(temp)
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <input type="button" value="AddNumbers" onclick="addTwoNumbers()"/>
+        <input type="button" value="DisplayMessage" onclick="displayMessage()"/>
+        <input type="button" value="RoomTemp1" onclick="roomTemperature(23)"/>
+        <input type="button" value="RoomTemp2" onclick="roomTemperature(9,8,7)"/>
+    </body>
+</html>

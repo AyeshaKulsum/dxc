@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var today = new Date();
+            var dd = parseInt(today.getDate());
+             lastdate = 15
+           // lastdate.setFullYear(2019,11,30);
+            var bill=parseInt(prompt("Enter bill amount"))
+            if(dd>today)
+            {
+                alert(bill)
+            } 
+            else{
+                daysextra= dd-lastdate
+                extra = 50 * daysextra
+                x=bill + extra
+                alert(x)
+            }
+        
+        </script>
+    </head>
+    <body>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Welcome to DXC - Login Form</title>
+
+        <script type="text/javascript"> 
+            function check()
+            {
+                var n1 = document.getElementById("number1").value;
+                var n2 = document.getElementById("number2").value;
+                var div1 = document.getElementById("div1");
+                var div2 = document.getElementById("div2");
+                var resultDiv = document.getElementById("resultDiv");
+               // if((n1))
+                if(((n1.length)==0)&&(n2.length==0))
+                {
+                    div1.innerHTML = "<font color=red>Please enter Number 1</font>"
+                    div2.innerHTML = "<font color=red>Please enter Number 2</font>"
+                }
+                if((n1.length)==0)
+                {
+                    div1.innerHTML = "<font color=red>Please enter Number 1</font>"
+                    div2.innerHTML = ""
+                }
+                else if(n2.length==0)
+                {
+                    div2.innerHTML = "<font color=red>Please enter Number 2</font>"
+                    div1.innerHTML =""
+                }
+                else{
+                    c= parseInt(n1)+parseInt(n2)
+                    alert(c)
+                    resultDiv.innerHTML = "<font color=green>Sum is :"+resultDiv;
+                }
+                
+            }
+        </script>
+    </head>
+    <body >
+        <form>
+            
+                    Number 1 : <input type="text " name="number1" id="number1"/>
+                    
+                    <span id="div1"></span>
+           <br/>
+                Number 2 : <input type="text " name="number2" id="number2"/>
+                
+                <span id="div2"></span>
+                <br/>
+                <input type="button" name="Add" value= "Go" onclick="check()"/>
+                <div id="resultDiv"></div>
+            
+        </form>
+         
+    </body>   
+</html>    
