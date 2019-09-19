@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function addNumbers(){
+                var result= document.getElementById("result")
+                //alert(document.forms[0].element.length)
+                var allNumbers = new Array(5)
+                var sum=0
+                for(var i=0;i<5;i++)
+                {
+                    
+                    allNumbers[i] = document.forms[0].elements[i].value
+                    sum=parseInt(allNumbers[i])+sum
+                }
+                result.innerHTML = "<font color=green>The sum of the numbers are : </font>"+sum
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Number 1 : <input type="text" name="number1" id="a" /><br/>
+            Number 2 : <input type="text" name="number2" id="b" /><br/>
+            Number 3 : <input type="text" name="number3" id="c" /><br/>
+            Number 4 : <input type="text" name="number4" id="d" /><br/>
+            Number 5 : <input type="text" name="number5" id="e" onblur="addNumbers()"/><br/>
+            
+        </form>
+        <div id="result"></div>
+    </body>
+</html>
