@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function add()
+            {
+                var mainDiv = document.getElementById('myDiv1')
+
+                var newDiv = document.createElement('div')
+                newDiv.setAttribute('id','innerDiv')
+
+                var newSpan = document.createElement('span')
+                newSpan.setAttribute('id','mySpan')
+                newSpan.innerHTML ="User Name : "
+
+                var newTextBox = document.createElement('input')
+                newTextBox.type ='text'
+                newTextBox.setAttribute('id','username')
+
+                newDiv.appendChild(newSpan)
+                newDiv.appendChild(newTextBox)
+
+                mainDiv.appendChild(newDiv)
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myDiv1"><input id="button1" type="button" value="Add a Text Box" onclick="add()"></div>
+    </body>
+</html>
