@@ -1,0 +1,47 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Movie player with poster</title>
+    <script>
+            var myVideo = document.getElementById("myVideo")
+        function play()
+        {
+            var myVideo = document.getElementById("myVideo")
+            if(myVideo.paused)
+            {
+                myVideo.play();
+            }
+            else{
+                myVideo.pause()
+            }
+        }
+            function makeBig()
+            {
+                var myVideo = document.getElementById("myVideo")
+                myVideo.width =1560;
+            }
+            function makeSmall()
+            {
+                var myVideo = document.getElementById("myVideo")
+                myVideo.width =420;
+            }
+            function makeNormal()
+            {
+                var myVideo = document.getElementById("myVideo")
+                myVideo.width =620;
+            }
+        
+        </script>
+</head>
+<body>
+    <div><input type="button" name="Play/Pause" id="Play/Pause" value="Play/Pause" onclick="play()">
+        <input type="button" name="Big" id="Big" value="Big" onclick="makeBig()">
+        <input type="button" name="Small" id="Small" value="Small" onclick="makeSmall()">
+        <input type="button" name="Normal" id="Normal" value="Normal" onclick="makeNormal()"></div>
+    
+<video controls height=340 width="640" poster="dxc.jpg" id="myVideo">
+<source src="video.mp4" type="video/mp4">
+</video>
+
+
+</body>
+</html>

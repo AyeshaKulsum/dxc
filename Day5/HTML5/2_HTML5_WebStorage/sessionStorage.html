@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+	var result = document.getElementById("result");
+	if(navigator.geolocation)
+	{
+			alert("support");
+			navigator.geolocation.getCurrentPosition(showPosition,showError);
+	}
+	else
+	{
+		alert("not support");
+	}
+}
+function showPosition(position)
+{
+	result.innerHTML = "Your current location is -- Latitude :"+position.coords.latitude + " , Longitude :"+position.coords.longitude ;
+	var latlon = position.coords.latitude +","+position.coords.longitude;
+	var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false";
+	document.getElementById("imageurl").innerHTML = "<img src="+img_url+"></img>";
+	
+}
+function showError(error)
+{
+		switch(error.code)
+		{
+				case error.PERMISSION_DENIED :
+				result.innerHTML = "<font color=red>User denied the request for location</font>";
+				break;
+				case error.POSITION_UNAVAILABLE :
+				result.innerHTML = "<font color=red>Location position is not available</font>";
+				break;
+				case error.TIMEOUT :
+				result.innerHTML = "<font color=red>Timeout error occurred</font>";
+				break;
+				case error.UNKOWN_ERROR :
+				result.innerHTML = "<font color=red>An unknown error occurred</font>";
+				break;
+		}
+}
+</script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click to know your location</button></p>
+<div id="result"></div>
+<div id="imageurl"></div>
+<br/>
+<br/>
+<br/>
+</body>
+</html>

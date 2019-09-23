@@ -1,0 +1,69 @@
+<html>
+<head>
+<script language="javascript">
+	function abc(form)
+	{
+		var field1 = form.nn; 
+		firstname=field1.value;
+		if(form["nn"].value.Length == 0)
+		{
+			alert("ENTER SOMETHING");
+		}
+		else
+		{
+			alert(a["nn"].value);
+		}
+		alert(form["nn"].value);
+	}
+</script>
+</head>
+<body>
+<h1><center>Registration Form</center></h1>
+<form name="a">
+<table border="0" cellspacing=10 cellpadding=10 align="center">
+<h1> 
+<tr><td>Name : </td><td><input id="nn" name="nn" type="text"></td></tr>
+<tr><td>Password :</td><td><input type="password"></td></tr>
+<tr><td>Gender :</td><td><input type="radio" name="a1" value="male">Male
+			<input type="radio" name="a1" value="female">Female</td></tr>
+<tr><td>Qualification :</td><td><select>
+					<option>Graduate</option>
+					<option>Post Graduate</option>
+					<option>Master</option>
+					<option>Intermediate</option>
+				</select></td></tr>
+<tr><td>Hobbies :</td><td><input type="checkbox">Cricket
+			<input type="checkbox">Football
+			<input type="checkbox">Movies<br>
+			<input type="checkbox">Singing
+			<input type="checkbox">Music
+			</td></tr>
+<tr><td>Select your favorite color: </td><td><input type="color" name="favcolor" /></td>
+<tr><td><input type="submit" onclick="abc(this)"></td><td><input type="reset"></td></tr>
+
+</table>
+<pre>
+
+Birthday: <input type="date" name="bday" />
+
+
+Birthday (date and time): <input type="datetime" name="bdaytime" />
+Birthday (date and time): <input type="datetime-local" name="bdaytime" />
+
+E-mail: <input type="email" name="usremail" />
+
+Birthday (month and year): <input type="month" name="bdaymonth" />
+
+Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5" />
+
+
+Range :<input type="range" name="points" value="7" min="1" max="10" />
+Search Google: <input type="search" name="googlesearch" />
+Telephone: <input type="tel" name="usrtel" />
+Select a time: <input type="time" name="usr_time" />
+Add your homepage: <input type="url" name="homepage" />
+Select a week: <input type="week" name="week_year" />
+
+</form>
+</body>
+</html>
