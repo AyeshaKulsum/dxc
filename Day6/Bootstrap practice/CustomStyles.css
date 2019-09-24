@@ -1,0 +1,18 @@
+.customDiv{
+    margin:3px;
+    min-height: 100px;
+    background-color: green;
+    text-align: center;
+    font-size: large;
+}
+.div{
+    min-height: 10px;
+    margin:3px;
+    font-size: large;
+}
+.CustomDivUse{
+    
+    min-width:250px;
+    text-align: center;
+    font-size: large;
+}
