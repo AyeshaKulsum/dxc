@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <script>
+        var NumOfRow = 1;
+        function addTable() {
+            var userName = document.getElementById("nameId").value;
+            var pricing = document.getElementById("priceId").value;
+            var divSpace = document.getElementById("myDiv");
+            //var newTable = document.createElement('table');
+            //newTable.setAttribute('id', 'table1');
+            var table = document.getElementById("oldTable");
+            var newRow = document.createElement('tr');
+            newRow.setAttribute('id', 'row1');
+            var newData1 = document.createElement('td');
+            newData1.setAttribute('id', 'data1');
+            var newData2 = document.createElement('td');
+            newData1.setAttribute('id', 'data2');
+            var newEditButton = document.createElement('input');
+            newEditButton.type = 'button';
+            newEditButton.value = 'Edit';
+            newEditButton.id = 'btn' + NumOfRow; // attach event for remove button click 
+            newEditButton.onclick = function edit() 
+            {
+                onfocus(newData1)
+                var table = document.getElementById('oldTable');
+                table.glyphicon-edit(this.parentNode);
+                //alert(this.parentNode)
+            }
+            var newDeleteButton = document.createElement('input');
+            newDeleteButton.type = 'button';
+            newDeleteButton.value = 'Delete';
+            newDeleteButton.id = 'btn' + NumOfRow; // attach event for remove button click 
+            newDeleteButton.onclick = function edit() 
+            {
+                var table = document.getElementById('oldTable');
+                table.removeChild(this.parentNode);
+                //alert(this.parentNode)
+            }
+           // newData1.appendChild(userName);
+           // newData2.appendChild(pricing);
+           newData1.innerHTML = userName
+           newData2.innerHTML = pricing
+            newRow.appendChild(newData1);
+            newRow.appendChild(newData2);
+            newRow.appendChild(newEditButton);
+            newRow.appendChild(newDeleteButton);
+            table.appendChild(newRow);
+            
+           // divSpace.appendChild(newTable);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Cart</h1>
+
+    <table cellpadding="10" cellspacing="10">
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" id="nameId">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price:
+            </td>
+            <td>
+                <input type="text" id="priceId">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="Add" onclick="addTable()">Add</button>
+                
+            </td>
+        </tr>
+    </table>
+    <div id="myDiv">
+
+    </div>
+    <table id="oldTable" cellspacing="10" cellpadding="10" border="1">
+        <th>Name</th>
+        <th>Price</th>
+    </table>
+</body>
+
+</html>

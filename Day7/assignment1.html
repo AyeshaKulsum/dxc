@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script >
+        function countChar(val){
+            var a=document.getElementById("a")
+            var len = val.value.length;
+            if (len <=15) {
+                
+                a.innerHTML="Remaining "+ (15-len) + "character"
+            }
+       };
+        </script>
+        
+    </head>
+    <body>
+        
+        <div>Maximum 15 Characters</div>
+        
+        
+        <textarea id="field" onkeyup="countChar(this)" maxlength="15"></textarea>
+        <div id="a">Remaining 15 character</div>
+    </body>
+</html>

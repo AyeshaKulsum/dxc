@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("button#correct").click(function(){
+                    $("p").toggle();
+                })
+            }
+            )
+            $(document).ready(function()
+            {
+                $("button#wrong").click(function(){
+                    alert("This is wrong button");
+                })
+            }
+            )
+        </script>
+    </head>
+    <body>
+        <p>My paragrapgh 1</p>
+        <p>My paragrapgh 2</p>
+        <p>My paragrapgh 3</p>
+        <button id="correct">Go</button>
+        <button id="wrong">Go</button>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("body").bind('cut copy paste',function(e)
+                
+                {
+                    alert("Very Smart , you cannot cut copy paste")
+                    e.preventDefault()
+                }
+
+                )
+                $("body").on("contextmenu",function(e){
+                    alert("Very smart, you can't right click")
+                    return false;
+                })
+            }
+            )
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.</h1>
+        <h2>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.</h2>
+        <h3>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.</h3>
+    </body>
+</html>

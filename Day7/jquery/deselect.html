@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#p1").click(function(){
+                    alert("You can't select")
+                    document.getElementById("p1").innerHTML = "Enter this paragraph"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="p1">Hi, Don't select me</p>
+    </body>
+</html>
