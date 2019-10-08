@@ -21,10 +21,13 @@ public class ProductDAOImpl implements productDAO {
 	
 	@Override
 	public Product getProduct(int productId) {
+		Product product = new Product();
 		
-		//Product product= allProducts.stream().filter(n-> n.getProductId()==productId).findFirst().get();
-	//return null;
-		PreapredStatement stat = connection.prepareStatement("select * from product where productId=?");
+		if(product.getProductId()==productId)
+		{
+			return product;
+		}
+		return product;
 	}
 
 	@Override
