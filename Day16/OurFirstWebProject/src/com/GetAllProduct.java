@@ -31,9 +31,19 @@ public class GetAllProduct extends HttpServlet {
 		productDAO productDAO = new ProductDAOImpl();
 		
 		
-		response.getWriter().println("<h2>Get All Product : </h2>");
-		response.getWriter().println(productDAO.getAllProducts());
-		 
+		response.getWriter().println("<h2>All Product : </h2>");
+		response.getWriter().println(
+				"<table border = 1><th>Product Id</th><th>Prodcut Name</th><th>Quantity on hand</th><th>Bill Amount</th>");
+
+				for (int i = 0; i < productDAO.getAllProducts().size(); i++) {
+				response.getWriter()
+				.println("<tr><td>" + productDAO.getAllProducts().get(i).getProductId() + "</td><td>"
+				+ productDAO.getAllProducts().get(i).getProductName() + "</td><td>"
+				+ productDAO.getAllProducts().get(i).getQuantityOnHand() + "</td><td>"
+				+ productDAO.getAllProducts().get(i).getBillAmount() + "</td></tr>");
+				}
+
+				response.getWriter().println("</table>");
 		response.getWriter().println("<a href='Welcome'><button>M E N U</button></a>");
 		
 	}
