@@ -1,0 +1,65 @@
+git
+create new repository in github my-dxc
+create new file welcome and write text
+commit new file
+download and install git
+go to C:\Users\asj2\Desktop\Training\git\my-dxc
+right click->git bash here
+git init
+(in github clone and get link)
+
+git remote add origin https://github.com/AyeshaKulsum/my-dxc.git 
+git pull origin master
+git status
+create Ayesha.txt
+git status
+git add Ayesha.txt
+git status
+git commit -m "Ayesha created Ayesha.txt"
+create three files
+git status
+git add -A(add all files)
+git status
+git commit -m "Three files commited"(or)git commit -a -m "Three files commited"
+git log(Track of history)
+=================================
+git branch firstbranch
+git checkout firstbranch 
+ssh-keygen
+cat /c/Users/asj2/.ssh/id_rsa.pub
+ssh -T git@github.com
+git push origin firstbranch
+
+git push
+git status
+git add 4.txt
+git commit -m "added in firstbranch"
+ls
+git checkout master
+ls
+git merge firstbranch
+ls
+cat 4.txt
+$ git checkout firstbranch
+add txt in 4.txt
+$ git commit -m "committed in firstmaster"
+git checkout master
+cat 4.txt
+got to first branch and say
+git checkout firstbranch
+git rebase master
+git checkout master
+git rebase firstbranch
+ssh -T git@github.com
+git checkout firstbranch
+git push origin firstbranch
+git checkout master
+git push origin master
+git diff
+git branch add
+git checkout add
+===============================
+To add modified data in stash
+git stash save "Worked on Ayesha.txt file"
+git stash list
+git stash apply stash@{0}
